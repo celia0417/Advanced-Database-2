@@ -17,6 +17,7 @@ The process of creating an infobox is as following:
 types of entities). An entity cannot be both a person and a league or sports team, so if it has been parsed as a person, then we don’t add the “League” or “Sports_team” type. Similarly if we already have league or sports team.
 <3>. We used a ordered dictionary to correspond each tag to the property we care about. Like there’s key-value pair “Name, /type/object/name”; for the compound value type, the value is a sub-level dictionary. We use this ordered dictionary to parse the topic object returned from freebase topic API and store the information in another ordered dictionary called “infobox”.
 <4>. We designed a function to format the output of the infobox, the width output is 100. So it is similar to the output of reference implementation.
+
 (2) Part 2: Question Answering
 <1>. Check if input file or question is empty, if so return warnings.
 <2>. For every single question, check if question is valid, if so do next steps; otherwise, return warnings.
